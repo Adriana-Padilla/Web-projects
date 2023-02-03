@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css?family=Mulish:wght@400;700&display=swap&effect=shadow-multiple|fire-animation|anaglyph|neon|3d');
+
+:root {
+    --green: #14A00C;
+    --white: #ffff;
+    --black: #000;
+    --red: #b41616;
+    --blue: #0c17a0;
+    --orange: #DF9A0E;
+    --titles: 'Arima', cursive;
+    --paragraph: 'Mulish', sans-serif;
+
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+}
+
+/*1rem = 10px font-size*/
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+    overflow-x: hidden;
+}
+
+/*Global*/
+.container {
+    max-width: 120rem;
+    margin: 0 auto;
+    width: 95%;
+}
+
+h1,
+h2 {
+    font-family: var(--paragraph);
+}
+
+h3,
+p,
+a {
+    font-family: var(--paragraph);
+}
+
+.hide {
+    display: none;
+}
+
+.btnClose {
+    font-size: 3rem;
+    font-weight: bold;
+    color: var(--white);
+    position: absolute;
+    top: 0;
+    right: 50px;
+    user-select: none;
+}
+
+.btnClose:hover {
+    cursor: pointer;
+}
+
+.btn{
+    text-decoration:none ;
+    color:var(--white);
+    font-size: 2rem;
+    text-transform: capitalize;
+    padding: 1rem 3rem;
+    border-radius: 5px;
+    transition: all .3s ease-in-out;
+}
+@media(min-width: 768px){
+    .btn{
+     font-size: 2.2rem;
+     padding-bottom: 100;
+ 
+    }
+ 
+ }
+.border{
+   border: 4px solid var(--white); 
+}
+.border:hover{
+    color: var(--red);
+    background-color: var(--white);
+}
+.full-screen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .5);
+    z-index: 4;
+}
+
+@keyframes menu-effect {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+/*Header*/
+.navigation-container {
+    background-color: var(--black);
+    position: relative;
+    z-index: 5;
+}
+
+.nav-contents {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo h2,
+.navbar a {
+    color: var(--white);
+}
+
+.logo h2 {
+    font-size: 3rem;
+}
+
+.navbar a {
+    text-decoration: none;
+    font-size: 2.2rem;
+    padding: 1.5rem;
+    padding-left: 4rem;
+    display: block;
+    transition: color .3s ease-in-out;
+    text-align: center;
+}
+
+@media(min-width:768px) {
+    .navbar a {
+        text-align: left;
+    }
+
+}
+
+.navbar a:hover {
+    color: var(--red);
+}
+
+.navbar a:first-of-type {
+    margin-top: 5rem;
+}
+
+.navbar {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    height: 100vh;
+    width: 40rem;
+    padding: 3rem 4rem;
+    background-color: var(--black);
+    animation: menu-effect .5s ease-in-out;
+}
+
+.burguer:hover {
+    cursor: pointer;
+}
+
+.burguer span {
+    background-color: var(--white);
+    display: block;
+    width: 5rem;
+    height: .5rem;
+    margin-bottom: .5rem;
+}
+
+/*Video*/
+.header-content {
+    position: relative;
+}
+
+.head-content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .5);
+}
+
+.head-text{
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.head-text h2{
+    color: var(--white);
+    font-size: 4rem;
+}
+
+@media(min-width: 768px){
+   .head-text h2{
+    font-size: 8rem;
+    padding-bottom: 100;
+
+   }
+
+}
+
+
+video {
+    width: 100%;
+    height: 100%;
+}
